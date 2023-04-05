@@ -1,0 +1,144 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: none;
+    font-family: 'NanumSquareNeoBold';
+}
+
+.container-wrapper{	/* 전체배경 */
+	margin: 0;
+	width: 90%;
+	height: 100%;
+	position: fixed;
+	margin-left: 10%;
+	background: rgb(34, 38, 46);
+}
+
+.ProFile-wrapper{	/* 프로필 전체 크기 */
+    width: 600px;
+    height: 800px;
+    padding: 0px 40px 40px 40px;
+    box-sizing: border-box;
+    background: linear-gradient(to top, rgb(59, 64, 70) 0%, rgb(46, 49, 56) 100%);
+	box-shadow: rgba(2, 10, 15, 0.3) 0px 0px 15px 15px;
+	border-radius: 10px;
+    position: fixed;
+	top: 50%;							/* 중앙 배치 ↓ transform 까지 */
+	left: 50%;
+	transform: translate(-50%, -50%);	
+}
+
+.ProFile-header {	/* 프로필 사진과 이름 아이디 공간*/
+	width: 520px;
+    height: 145px;
+    padding: 20px 40px 40px 40px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.ProFile-image {	/* 프로필사진 넣을 공간 */
+	width: 110px;
+    height: 110px;
+    margin-top: 10px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    border: 2px solid #c5c5c7;
+    position: absolute;
+    overflow: hidden;
+}
+
+.ProFile-name {		/* Name, id 들어갈 공안*/
+	width: 300px;
+    height: 120px;
+    padding: 15px;
+    box-sizing: border-box;
+	display: inline-block;
+    position: relative;
+    left: 25%;
+    top: 10%;
+}
+
+.ProFile-name > h2 {
+	font-size: 40px;
+	color: #ffffff;
+	font-weight: bold;
+	padding: 5px;
+}
+
+.ProFile-name > a {
+	font-size: 12px;
+	color: #808080;
+	padding: 5px;
+	padding-left: 12px;
+}
+
+.ProFile-Content {		/* 정보의 자료들 나올 공간 */
+	width: 520px;
+    height: 450px;
+    padding: 20px 40px 40px 40px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.ProFile-EditForm > label {
+	color : #fff;
+	margin-bottom: 13px;	
+	font-size : 12px;
+}
+
+.Profile-EditForm > h4 {
+	color : #fff;
+	margin-bottom: 13px;	
+	font-size : 12px;
+}
+
+.ProFile-EditForm > input[type="password"], input[type="text"], input[type="email"] {
+	width: 100%;
+    height: 40px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    background-color: #c0c0c0;
+}
+
+.ProFile-EditForm > input[type="file"] {
+	display: none;
+}
+
+#custom-file-upload {
+	border-radius: 18px;
+    display: inline-block;
+    padding: 0px 9px 0px 0px;
+    cursor: pointer;
+    position: fixed;
+    left: 14.5%;
+    top: 16.5%;
+    font-size: 10px;
+    background-color: rgba(192,192,192,0.9);
+}
+
+.ProFile-EditForm > input[type="submit"], input[type="button"] {
+	width: 100%;
+	border-radius: 6px;
+	color: #fff;
+    font-size: 14px;
+    height: 40px;
+    background-color: #008040;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    cursor: pointer;
+}
+
+.ProFile-EditForm > input[type="button"] {
+    background-color: #0080c0;
+}
+
+.check {
+	width: 100%;
+	position: absolute;
+	top: 180px;
+	right: 0;
+	left: 310px;
+}

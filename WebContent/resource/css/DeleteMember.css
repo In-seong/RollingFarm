@@ -1,0 +1,115 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: none;
+    font-family: 'NanumSquareNeoBold';
+}
+
+.container-wrapper{	/* 전체배경 */
+	margin: 0;
+	width: 90%;
+	height: 100%;
+	position: fixed;
+	margin-left: 10%;
+	background: rgb(34, 38, 46);
+}
+
+.ProFile-wrapper{	/* 프로필 전체 크기 */
+    width: 550px;
+    height: 600px;
+    padding: 40px;
+    box-sizing: border-box;
+    background: linear-gradient(to top, rgb(59, 64, 70) 0%, rgb(46, 49, 56) 100%);
+	box-shadow: rgba(2, 10, 15, 0.3) 0px 0px 15px 15px;
+	border-radius: 10px;
+    position: fixed;
+	top: 50%;							/* 중앙 배치 ↓ transform 까지 */
+	left: 50%;
+	transform: translate(-50%, -50%);	
+}
+
+.ProFile-header {	/* 프로필 사진과 이름 아이디 공간*/
+	width: 470px;
+    height: 190px;
+    padding: 40px;
+    border-bottom: 1px solid #c5c5c7;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.ProFile-image {	/* 프로필사진 넣을 공간 */
+	width: 110px;
+    height: 110px;
+    margin-top: 10px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    border: 2px solid #c5c5c7;
+    position: absolute;
+    overflow: hidden;
+}
+
+.ProFile-name {		/* Name, id 들어갈 공안*/
+	width: 300px;
+    height: 120px;
+    padding: 15px;
+    box-sizing: border-box;
+	margin-left: 25%;
+}
+
+.ProFile-name > h2 {
+	font-size: 40px;
+	color: #ffffff;
+	font-weight: bold;
+	padding: 5px;
+}
+
+.ProFile-name > a {
+	font-size: 12px;
+	color: #808080;
+	padding: 5px;
+	padding-left: 12px;
+	display: inline-block;
+    position: relative;
+    top: 5%;
+}
+
+.ProFile-Content {		/* 정보의 자료들 나올 공간 */
+	width: 470px;
+    height: 360px;
+    padding: 40px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.ProFile-DeleteForm > h3 {
+	color : #fff;
+	margin-bottom: 10px;	
+	font-size: 16px;
+}
+
+.ProFile-DeleteForm > input {
+	width: 100%;
+    height: 48px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: #c0c0c0;
+}
+
+.ProFile-DeleteForm > input[type="submit"] {
+	color: #fff;
+    font-size: 14px;
+    background-color: #ff8040;
+    margin-top: 40%;
+    cursor: pointer;
+}
+
+.error {
+	width:100%;
+	color:red;
+	font-size:15px;
+	position: absolute;
+	top: 130px;
+	right: 0;
+	left: 45px;
+}

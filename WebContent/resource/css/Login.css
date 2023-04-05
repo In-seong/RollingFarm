@@ -1,0 +1,121 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: none;
+    font-family: 'NanumSquareNeoBold';
+}
+
+.content-wrapper{	/* 전체 속성 */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0;
+	width: 90%;
+	height: 100%;
+	position: fixed;
+	margin-left: 10%;
+	background: rgb(34, 38, 46);
+}
+.login-wrapper{		/* 로그인 틀 */
+    width: 400px;
+    height: 400px;
+    padding: 40px;
+    box-sizing: border-box;
+ 	background: linear-gradient(to top, rgb(59, 64, 70) 0%, rgb(46, 49, 56) 100%);
+	box-shadow: rgba(2, 10, 15, 0.3) 0px 0px 15px 15px;
+	border-radius: 10px;
+    position: fixed;
+	top: 50%;							/* 중앙 배치 ↓ transform 까지 */
+	left: 50%;
+	transform: translate(-50%, -50%);	
+}
+
+.login-wrapper > h1{
+    font-size: 24px;
+    color: rgb(83, 145, 101);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.login-wrapper > h3{
+    font-size: 20px;
+    color: #008000;
+    margin-bottom: 15px;
+}
+
+#login-form > h3{
+    font-size: 20px;
+    color: #008000;
+    margin-bottom: 10px;
+    text-align: left;
+    padding: 0px;
+}
+
+#login-form > input{
+    width: 100%;
+    height: 48px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    margin-bottom: 14px;
+    background: rgba(0,0,0,0);
+    border-bottom: 1px solid #c0c0c0;
+    color: #fff;
+}
+
+#login-form > input::placeholder{
+    color : #8E8E8E;
+}
+
+input[name="userId"]:focus, input[name="userPassword"]:focus {
+  outline: none;
+  padding-left: 40px;
+}
+
+#login-form > input[type="submit"]{
+    color: #fff;
+    font-size: 16px;
+    background-color: #008040;
+    margin-top: 20px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+}
+
+#login-form > input[type="checkbox"]{
+    display: inline-block;
+    cursor: pointer;
+}
+
+#login-form > label{
+    color: #999999;
+    cursor: pointer;
+    display: inline-block;
+    width: 100%;
+    margin-top: 6%;
+    font-size: 14px;
+}
+
+.login-footer {	/* id, pass 찾기 */
+	float:left;
+	margin-top: 6%;
+	font-size: 13px;
+	color: #bcbec0;
+}
+
+.signUp {
+	position: relative;
+	left: 36%;
+}
+
+.login-footer::hover{
+	font-size: 14px;
+	color: #d7d8d9;
+}
+
+.error {
+	font-size: 12px;
+    color: red;
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+}

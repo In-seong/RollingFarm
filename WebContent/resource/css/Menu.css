@@ -1,0 +1,172 @@
+body {
+	padding: 0;
+	margin: 0;
+	border: none;
+	height: 100%;
+	overflow: hidden;
+	font-family: 'NanumSquareNeoBold';
+}
+
+a {	/* 전체 링크 밑줄 없애기*/
+	text-decoration: none;
+}
+.header-wrapper {	/* 헤더영역 */
+	display: block;
+	color: white;
+	height: 50px;
+	background: linear-gradient(to left, rgb(33, 36, 43) 0%, rgb(9, 16, 31) 50%, rgb(1, 6, 10) 100%);
+	margin-left: 10%;
+	width: 90%;
+}
+
+.login-header {		/* 헤더 오른쪽 부분 로그인과 회원가입 */
+	list-style-type: none;
+	margin: 0px;
+	padding : 0px;
+	margin-right: 15px;
+	display: inline-flex;
+	font-size: 40px;
+	float: right;
+}
+
+.login-menu {	/* list 로그인, 회원가입 */
+	vertical-align: middle;
+	padding-left: 10px;
+}
+
+.login-menu > a {
+	text-decoration: none;
+	text-align: center;
+	color: #ffffff;
+	font-size: 1vw;
+	font-weight: bold;
+}
+
+.list-wrapper {	/* 왼쪽 사이드 메뉴 바 */
+	background: linear-gradient(to top, rgb(33, 36, 43) 0%, rgb(9, 16, 31) 50%, rgb(1, 6, 10) 100%);
+	width: 10%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	position: fixed;
+	overflow: hidden;
+}
+
+.list-wrapper > img {
+	position: absolute;
+	width: 246px;
+    height: 140px;
+    left: -14%;
+}
+
+.list-header {
+	list-style-type: none;
+	background: linear-gradient(to top, rgb(33, 36, 43) 0%, rgb(9, 16, 31) 50%, rgb(1, 6, 10) 100%);
+	width: 10%;
+	height: 90%;
+	top: 12%;
+	padding: 0;
+	margin: 0;
+	position: fixed;
+	overflow: hidden;
+	display: inline-block;
+	color: #ffffff;
+	
+}
+
+.menu {
+	padding: 20px 20px;
+	overflow: hidden;
+	cursor: pointer;
+	text-align: center;
+}
+
+.menu > a {
+	font-size: 16px;
+	text-align: center;
+	color: rgba(255, 255, 255, 1);
+  	font-weight: 300;
+ 	padding: 15px 25px;
+ 	position: relative;
+ 	display: block;
+ 	text-decoration: none;
+ 	text-transform: uppercase;
+}
+
+.list-header a:before, .list-header a span:before, .list-header a:after, .list-header a span:after {
+  content: "";
+  position: absolute;
+}
+
+.list-header a:before, .list-header a span:before {
+  top: -webkit-calc(50% - .3em);
+  top: calc(50% - .3em);
+  left: -.25em;
+  width: .5em;
+  height: .5em;
+  opacity: 0;
+  -webkit-transform: translate3d(-.6em, 0, 0) rotate(45deg);
+  transform: translate3d(-.6em, 0, 0) rotate(45deg)
+}
+
+.list-header a:after, .list-header a span:after {
+  bottom: -webkit-calc(50% - .35em);
+  bottom: calc(50% - .35em);
+  right: -.25em;
+  width: .5em;
+  height: .5em;
+  opacity: 0;
+  -webkit-transform: translate3d(.6em, 0, 0) rotate(45deg);
+  transform: translate3d(.6em, 0, 0) rotate(45deg)
+}
+
+.list-header a:before, .list-header a:after {
+  -webkit-transition: -webkit-transform .3s ease-out, opacity .3s;
+  transition: transform .3s ease-out, opacity .3s
+}
+
+.list-header a span:before, .list-header a span:after {
+  -webkit-transition: -webkit-transform .3s ease-out .15s, opacity 0s .05s;
+  transition: transform .3s ease-out .15s, opacity 0s .05s
+}
+
+.list-header a:hover {
+  overflow: visible
+}
+
+.list-header a:hover:before, .list-header a:hover span:before {
+  -webkit-transform: translate3d(0, 0, 0) rotate(45deg);
+  transform: translate3d(0, 0, 0) rotate(45deg);
+  opacity: 1
+}
+
+.list-header a:hover:after, .list-header a:hover span:after {
+  -webkit-transform: translate3d(0, 0, 0) rotate(45deg);
+  transform: translate3d(0, 0, 0) rotate(45deg);
+  opacity: 1
+}
+
+.list-header a:before, .list-header a span:before {
+  border-right: .15em solid rgba(255, 255, 255, 0.4);
+  border-top: .15em solid rgba(255, 255, 255, 0.4);
+}
+
+.list-header a:after, .list-header a span:after {
+  border-left: .15em solid rgba(255, 255, 255, 0.4);
+  border-bottom: .15em solid rgba(255, 255, 255, 0.4);
+}
+
+.list-footer {	/* 사이드 맨 아래 Design from */
+	background-color: rgba(0, 0, 0, 0);
+	width: 10%;
+	padding: 0;
+	margin: 0;
+	color: rgb(149, 153, 157);
+	position: fixed;
+	overflow: auto;
+	font-size: 12px;
+	text-align: center;
+	left: 0px;
+	top: 95%;
+}
+

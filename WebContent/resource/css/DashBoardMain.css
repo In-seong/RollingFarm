@@ -1,0 +1,391 @@
+*{
+    padding: 0;
+    margin: 0;
+	font-family: 'NanumSquareNeoBold';
+}
+
+.container-wrapper {	/* 메인 컨텐츠 */
+	display: flex;
+	margin: 0;
+	width: 90%;
+	height: 58%;
+	position: fixed;
+	margin-left: 10%;
+	background: rgb(34, 38, 46);
+	}
+
+.btmcontainer-wrapper {
+	display: flex;
+    margin: 0;
+    width: 90%;
+    height: 38%;
+    position: fixed;
+    margin-left: 10%;
+    margin-top: 29%;
+    background: rgb(34, 38, 46);
+}
+/* 센서 표 관련 */
+.sensor-wrapper {
+	width: 74%;
+	height: 100%;
+	box-sizing: border-box;
+	/* border: 2px solid #c5c5c7; */
+	display: inline-block;
+}
+
+.sensor {	/* 센서 표 */
+	display: inline-block;
+    width: 20%;
+    height: 42%;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 20px;
+    border-radius: 7%;
+    margin: 25px 0px 0px 45px;
+}
+
+.sensor-header { /* 센서 표 헤더 (온도,습도 등) */
+	width: 100%;
+	height: 15%;
+	box-sizing: border-box;
+}
+
+.sensor-header > h2 {
+	font-size: 18px;
+	color: #fff;
+	padding-top: 15px;
+}
+
+.sensor-content {	/* 센서 표 도넛차트 위치 */
+	width: 100%;
+	height: 80%;
+	box-sizing: border-box;
+}
+
+/* 체크박스 스타일 초기화 */
+.sensor-content > input[type=checkbox] {
+	position: absolute;
+	appearance: none;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+/* 체크박스가 체크된 상태일 때 label 스타일 */
+.sensor-content > input[type=checkbox]:checked + label.circle-label {
+	background-color: #80ff80;
+	color: white;
+	box-shadow: 0 0 20px #808080;
+}
+
+/* label 스타일 */
+.sensor-content > label.circle-label {
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+	background-color: #ff8080;
+	line-height: 100px;
+	text-align: center;
+	border: none;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: all 0.4s ease-in-out;
+}
+
+/* label hover 효과 */
+.sensor-content input[type=checkbox]:hover:after {
+	content: "";
+	position: absolute;
+	top: -3px;
+	left: -3px;
+	right: -3px;
+	bottom: -3px;
+	border: 3px solid #e5e5e5;
+	border-radius: 60px;
+	transition: 0.5s;
+}
+
+
+/* 기상청 표 전체 틀 */
+.weather-wrapper {
+	width: 24%;
+	height: 100%;
+	box-sizing: border-box;
+	/* border: 1px solid #c5c5c7; */
+	padding: 30px 20px 40px 20px;
+}
+
+.weather-image {
+	width: 50px;
+    height: 50px;
+    vertical-align: middle;
+    padding-right: 10px;
+}
+
+.table-wrapper {
+	background: linear-gradient(to top, rgb(59, 64, 70) 0%, rgb(46, 49, 56) 100%);
+	box-shadow: rgba(2, 10, 15, 0.3) 0px 0px 15px 15px;
+	width: 100%;
+	height: 100%;	
+	border-radius: 10px;
+}
+
+.weather-table {
+	border-collapse: collapse;
+	width: 80%;
+	height: 100%;
+	border-radius: 10px;
+	margin-left: 35px;
+}
+
+.weather-table tr {
+	padding: 8px;
+	text-align: center;
+	color: #fff;
+}
+.weather-table tr:not(:first-child) {
+	border-top: 1px solid #c5c5c7;
+	padding: 8px;
+	text-align: center;
+	color: #fff;
+}
+
+#test {
+	width: 30%;
+}
+
+/* 일간 온습도 그래프 틀 */
+.dailyGraph-wrapper {
+	width: 74%;
+	height: 100%;
+	box-sizing: border-box;
+	/* border: 2px solid #c5c5c7; */
+}
+
+.dailyGraph {
+	width: 92%;
+    height: 90%;
+    padding-top: 14px;
+    background: linear-gradient(to top, rgb(59, 64, 70) 0%, rgb(46, 49, 56) 100%);
+    box-shadow: rgba(2, 10, 15, 0.3) 10px 5px 20px 10px;
+    border-radius: 10px;
+    margin-left: 45px;
+}
+
+.dailyGraph-date {
+    font-size: 12px;
+    color: #333;
+    background-color: #c0c0c0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 4px 6px;
+    position: relative;
+    top: -305px;
+    left: 1036px;
+  }
+  
+/* 수동 장비 제어 틀 */
+.controller-wrapper {
+	width: 24%;
+	height: 100%;
+	box-sizing: border-box;
+	padding: 0 20px 20px 20px;
+}
+
+.mc-table {
+	width: 80%;
+	height: 100%;
+	border-collapse: collapse;
+	border-radius: 10px;
+	margin-left: 35px;
+}
+
+.mc-table tr {
+	height: 30px;
+	padding: 8px;
+	text-align: center;
+	color: #fff;
+}
+.mc-table tr:not(:first-child) {
+	border-top: 1px solid #c5c5c7;
+	padding: 8px;
+	text-align: center;
+	color: #fff;
+}
+
+#test {
+	width:60%;
+	height:13%;
+	column-span: all;
+}
+
+#mc-td {
+	width: 40%;
+	height: 13%;
+	column-span: all;
+	text-align: right;
+}
+
+.weather-api {
+	width: 60%;
+	height: 13%;
+	text-align: left;
+}
+
+/* 온오프 스위치 */
+.wrapper { 
+	position: relative;
+}
+
+.wrapper > input[type="checkbox"] {
+	position: absolute;
+	/* hidden */
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+.wrapper > label {
+	position: relative;
+	cursor: pointer;
+	display: inline-block;
+	width: 58px;
+	height: 28px;
+	background: #ff8080;
+	border: 2px solid #ff4646;
+	border-radius: 20px;
+	transition: 0.2s;
+}
+
+.wrapper > label:hover {
+	background: #ff0000;
+}
+
+.onoff_btn {
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	display: inline-block;
+	width: 19px;
+	height: 19px;
+	border-radius: 20px;
+	background: #ffffff;
+	transition: 0.2s;
+}
+/* checking style */
+#airconSwitch:checked+.airconSwitch_label {
+  background-color: #80ff80;
+  border: 2px solid #008000;
+}
+
+#airconSwitch:checked+.airconSwitch_label:hover {
+  background-color: #008000;
+}
+
+/* move */
+#airconSwitch:checked+.airconSwitch_label .onoff_btn {
+  left: 33px;
+  background: #fff;
+  box-shadow: 1px 2px 3px #00000020;
+}
+
+#heaterSwitch:checked+.heaterSwitch_label {
+  background-color: #80ff80;
+  border: 2px solid #008000;
+}
+
+#heaterSwitch:checked+.heaterSwitch_label:hover {
+  background-color: #008000;
+}
+
+#heaterSwitch:checked+.heaterSwitch_label .onoff_btn {
+  left: 33px;
+  background: #fff;
+  box-shadow: 1px 2px 3px #00000020;
+}
+
+#fanSwitch:checked+.fanSwitch_label {
+  background-color: #80ff80;
+  border: 2px solid #008000;
+}
+
+#fanSwitch:checked+.fanSwitch_label:hover {
+  background-color: #008000;
+}
+
+#fanSwitch:checked+.fanSwitch_label .onoff_btn {
+  left: 33px;
+  background: #fff;
+  box-shadow: 1px 2px 3px #00000020;
+}
+
+#ledSwitch:checked+.ledSwitch_label {
+  background-color: #80ff80;
+  border: 2px solid #008000;
+}
+
+#ledSwitch:checked+.ledSwitch_label:hover {
+  background-color: #008000;
+}
+
+#ledSwitch:checked+.ledSwitch_label .onoff_btn {
+  left: 33px;
+  background: #fff;
+  box-shadow: 1px 2px 3px #00000020;
+}
+
+#pumpSwitch:checked+.pumpSwitch_label {
+  background-color: #80ff80;
+  border: 2px solid #008000;
+}
+
+#pumpSwitch:checked+.pumpSwitch_label:hover {
+  background-color: #008000;
+}
+
+#pumpSwitch:checked+.pumpSwitch_label .onoff_btn {
+  left: 33px;
+  background: #fff;
+  box-shadow: 1px 2px 3px #00000020;
+}
+
+#s1 {
+	background: linear-gradient(to top, rgb(59, 64, 70) 0%, rgb(46, 49, 56) 100%);
+	box-shadow: rgba(2, 10, 15, 0.3) 20px 2px 20px 0px;
+}
+
+#s2 {
+	background: linear-gradient(to top, rgb(59, 64, 70) 0%, rgb(46, 49, 56) 100%);
+	box-shadow: rgba(2, 10, 15, 0.3) 20px 2px 20px 0px;
+}
+
+#s3 {
+	background: linear-gradient(to top, rgb(59, 64, 70) 0%, rgb(46, 49, 56) 100%);
+	box-shadow: rgba(2, 10, 15, 0.3) 20px 2px 20px 0px;
+}
+
+#s4 {
+	background: linear-gradient(to top, rgb(59, 64, 70) 0%, rgb(46, 49, 56) 100%);
+	box-shadow: rgba(2, 10, 15, 0.3) 20px 2px 20px 0px;
+}
+
+#s5 {
+	background: linear-gradient(to top, rgb(59, 64, 70) 0%, rgb(46, 49, 56) 100%);
+	box-shadow: rgba(2, 10, 15, 0.3) 20px 2px 20px 0px;
+}
+
+#s6 {
+	background: linear-gradient(to top, rgb(59, 64, 70) 0%, rgb(46, 49, 56) 100%);
+	box-shadow: rgba(2, 10, 15, 0.3) 20px 2px 20px 0px;
+}
+
+#s7 {
+	background: linear-gradient(to top, rgb(59, 64, 70) 0%, rgb(46, 49, 56) 100%);
+	box-shadow: rgba(2, 10, 15, 0.3) 20px 2px 20px 0px;
+}
+
+#s8 {
+	background: linear-gradient(to top, rgb(59, 64, 70) 0%, rgb(46, 49, 56) 100%);
+	box-shadow: rgba(2, 10, 15, 0.3) 20px 2px 20px 0px;
+}
+
